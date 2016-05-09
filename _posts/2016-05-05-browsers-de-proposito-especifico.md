@@ -8,7 +8,7 @@ Este é o primeiro de uma série de artigos nos quais eu pretendo explicar como 
 
 Nós podemos levar esta analogia adiante desenvolvendo aplicações (seja elas apps ou aplicações web) que adotam a restrição [HATEOAS (Hypertext As Then Engine Of Application State)](https://en.wikipedia.org/wiki/HATEOAS) do estilo arquitetural [REST (Respresentational State Transfer)](https://en.wikipedia.org/wiki/Representational_state_transfer).
 
-#A Barra de Endereços
+# A Barra de Endereços
 Todo browser possui uma barra de endereços, ou seja, um campo onde o usuário digita o endereço de um recurso cuja representação ele deseja obter. Para implementar a barra de endereços de nosso browser de propósito específico, vamos usar um recurso pouco difundido, porém muito útil, do módulo [ngRoute](https://docs.angularjs.org/api/ngRoute): a definição de uma rota pode conter um mapa chamado **resolve**. Os valores deste mapa são funções que retornam promessas. Quando uma rota é ativada, o AngularJS executa as funções e espera até que todas as promessas retornadas sejam resolvidas para, só então, executar o controlador da rota e, em seguida, exibir seu template. 
 
 {% highlight javascript %}
