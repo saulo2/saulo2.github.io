@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="initial-scale=1, width=device-width">        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="css/syntax.css">
+
+        <title>Blog do Saulo Araujo</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>
+                        <img src="img/foto.jpg" class="img-responsive img-thumbnail" style="margin-top: 40px">
+                    </p>                            
+                    <p style="font-size: smaller">
+                        <b>Saulo Araujo</b> é mestre em ciência da computação, arquiteto de software com quase 20 anos de experiência, instrutor de treinamento e desenvolvedor &ldquo;full stack&rdquo;.  
+                    </p>
+                    <p>
+                        <a href="https://github.com/saulo2">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/saulo_medeiros">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://br.linkedin.com/in/saulo2">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </p>
+                </div>                
+
+                <div class="col-sm-10">
+                    {% for post in site.posts %}
+                        <h1 class="page-header" {% if forloop.first %}style="margin-top: 40px"{% endif %}>
+                            {{post.title}}                        
+                        </h1>
+                        {{post.content}}                    
+                    {% endfor %}
+                </div>                
+            </div>
+        </div>
+    <body>
+</html>
