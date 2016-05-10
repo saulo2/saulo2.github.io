@@ -39,4 +39,4 @@ modulo.config(function($routeProvider) {
 {% endraw %}
 {% endhighlight %}
 
-## Um resolve genérico
+# Um resolve genérico
